@@ -1,0 +1,16 @@
+# Normalise text files, let git decide line endings in the working copy
+* text=auto
+
+# Scripts must keep LF or they break when run on Linux/macOS
+*.sh  text eol=lf
+*.awk text eol=lf
+
+# Design exports are binary — never diff or line-ending-convert them
+*.png binary
+*.jpg binary
+*.pdf binary
+*.gif binary
+*.webp binary
+*.mp4 binary
+*.woff  binary
+*.woff2 binary

@@ -12,3 +12,19 @@ Desktop.ini
 
 # Claude Code local overrides
 .claude/settings.local.json
+
+# ---------------------------------------------------------------------------
+# Design mocks and exports stay LOCAL. Never pushed.
+#
+# Tracked:   RECORD.md (metadata, artifact URL, review status)
+#            folder structure via .gitkeep
+# Not tracked: the design files themselves
+# ---------------------------------------------------------------------------
+04_UI_UX/designs/**/exports/
+04_UI_UX/designs/**/source/
+
+# Canvas drafts and design binaries anywhere in the tree
+*.dc.html
+*.fig
+*.sketch
+*.xd

@@ -92,8 +92,23 @@ designs/Law_Enforcement/Police_Database/03_Subject_Record/
 <anything blocking approval>
 ```
 
-## A note on version control
+## Version control policy
 
-This directory is not currently under git — the repository has no VCS initialised. Exports will accumulate and there is no history if a file is overwritten.
+**Design files stay local. They are never pushed.**
 
-**Worth fixing before the first design lands.** `git init` plus an LFS rule for `exports/` would cost a few minutes now and save real pain later.
+| Path | Tracked? |
+|---|---|
+| `RECORD.md` | **Yes** — metadata, artifact URL, review status |
+| Category and simulation folders | **Yes** — structure preserved via `.gitkeep` |
+| `exports/` | No — gitignored |
+| `source/` | No — gitignored |
+| `*.dc.html`, `*.fig`, `*.sketch`, `*.xd` anywhere | No — gitignored |
+
+The repository carries the **index**, not the artwork: what was designed, from which brief, where it lives, and whether it passed review. The mocks themselves live on your machine.
+
+### What this means in practice
+
+- **Back up `exports/` yourself.** Git is not doing it. If your disk dies, the designs are gone.
+- **`RECORD.md` is the only shared record of a design.** Fill in the artifact URL — without it, nobody else can find the design at all.
+- `new-design.sh` creates `exports/` and `source/` locally each time; they will not appear for anyone who clones the repo, which is intended.
+- Git LFS is deliberately **not** configured. It isn't needed while no binaries are tracked.

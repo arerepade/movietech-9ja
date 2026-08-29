@@ -6,13 +6,29 @@ Paste-ready prompts for Claude Designer. One file per screen.
 
 Open a file, copy everything below the horizontal rule, paste it. That's the whole workflow.
 
+## Two ways to run these
+
+**A — Project mode (recommended for a run of screens).** Load `00_DESIGN_INSTRUCTIONS.md` **once** — paste it at the start of the Claude Designer session, or set it as the project's custom instructions. Then send screens from `short/` (~2.8KB each). The design system stays in context and governs everything you design in that session.
+
+**B — One-off mode.** Send a `W1-*.md` from this directory (~12KB each). Fully self-contained, spec included. Use this for a single screen or a fresh session.
+
+Do not use `short/` without loading the instruction first — the designer will have no styling to follow and will invent its own.
+
 ## How these are built
 
 | File | Role |
 |---|---|
-| `_DESIGN_SPEC.md` | The shared design-system block, inlined into every brief. **Single source of truth.** |
-| `W1-*.md` | Generated. Header + spec block + that screen's brief. |
-| `../tools/build-briefs.mjs` | Rebuilds all 13 from `_DESIGN_SPEC.md` |
+| `_DESIGN_SPEC.md` | The design system. **Single source of truth — edit this one.** |
+| `00_DESIGN_INSTRUCTIONS.md` | Generated. The standing instruction for project mode. |
+| `W1-*.md` | Generated. Header + full spec + that screen's brief. |
+| `short/W1-*.md` | Generated. Header + that screen's brief only. |
+| `../tools/build-briefs.mjs` | Rebuilds all of the above |
+
+## Staying aligned
+
+`_DESIGN_SPEC.md` ends with a **compliance report** the designer must output with every screen: Tier A elements used, largest and smallest type size, any colour outside the palette, shell dimensions, row and panel counts, frame-safe check, states delivered, imperfections used, and any deviations.
+
+That is the alignment mechanism. A stated deviation is fine and useful; an unstated one is the thing to catch. Check the report before accepting a screen.
 
 **Do not hand-edit the spec block inside a `W1-*.md` file** — it will be overwritten. Edit `_DESIGN_SPEC.md` and re-run:
 

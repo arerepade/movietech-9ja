@@ -1,8 +1,8 @@
 # W1-01 — NBCR Login
 
-**Copy everything below the line and paste it into Claude Designer.** It is fully self-contained — no repo files are needed.
+**Copy everything below the line and paste it into Claude Designer.** Fully self-contained — no repo files needed.
 
-**Copy everything below the line and paste it into Claude Designer.** It is fully self-contained — no repo files are needed.
+Running several screens in one Claude Designer project? Load [`00_DESIGN_INSTRUCTIONS.md`](00_DESIGN_INSTRUCTIONS.md) once instead, then use the short form in [`short/`](short/).
 
 ---
 
@@ -168,6 +168,26 @@ Dates `DD/MM/YYYY` · currency `₦1,250,000.00` · phone `+234 802 ••• �
 Real software has scars; perfect software reads as fake. Include **exactly the imperfections listed in the brief below — no more.** Two or three is authentic; more reads as broken.
 
 They are always deliberate and quiet: a cryptic field label like `CLASS_CD`, a column header truncated mid-word, one legacy panel in an older typeface, a stale badge that never clears, a disabled dropdown option with no explanation, two modules disagreeing on date format.
+
+## 11. BEFORE YOU DELIVER — report, don't drift
+
+These rules are not suggestions and not a starting point to improve on. **Do not substitute your own palette, type scale, spacing or corner radii.** If something here seems wrong, follow it anyway and say so in your notes — do not silently fix it.
+
+With every screen, output a short compliance report:
+
+```
+TIER A (max 3):   1. …   2. …   3. …
+TYPE:             largest __px · smallest __px  (must be 13-48, nothing 21-31)
+PALETTE:          any colour used that is not in section 5? list it
+SHELL:            top bar 56 · cue banner 44 reserved · nav 260 · status bar 32  [y/n each]
+DENSITY:          __ table rows (max 12) · __ panels (max 3)
+FRAME-SAFE:       Tier A clear of edges and bottom-right quadrant?  [y/n]
+STATES:           list the artboards delivered
+IMPERFECTIONS:    list them — must match the brief exactly, no extras
+DEVIATIONS:       anything you changed from this spec, and why
+```
+
+If you could not follow a rule, say which and why. A stated deviation is fine. An unstated one is not.
 
 ---
 

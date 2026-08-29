@@ -1,6 +1,6 @@
 # W1-08 — Marina General Patient Chart
 
-**Run this immediately after W1-03.** Same archetype (A4), different institution. If the two come back structurally identical but visually distinct, the institution theme contract works. If they come back structurally different, the system has a hole and we fix it before designing anything else.
+Same archetype (A4) as W1-03 and W1-12, different institution. Compare all three once you have them: they should be **structurally identical but visually distinct**. If they diverge structurally, the theme contract has a hole.
 
 **Copy everything below the line and paste it into Claude Designer.** Fully self-contained — no repo files needed.
 

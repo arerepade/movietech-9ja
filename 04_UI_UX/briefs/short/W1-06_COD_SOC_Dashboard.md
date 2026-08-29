@@ -1,6 +1,6 @@
 # W1-06 — COD SOC Dashboard
 
-First dark-mode screen. Run third, after W1-03 and W1-08.
+First dark-mode screen — the one that proves the dark palette works.
 
 **Short form.** Use this ONLY when `00_DESIGN_INSTRUCTIONS.md` is already loaded in the Claude Designer session — pasted at the start, or set as the project's custom instructions.
 

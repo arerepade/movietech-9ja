@@ -68,12 +68,14 @@ Thirteen screens chosen to exercise **all eleven archetypes**, **six institution
 
 **W1-03 and W1-08 are the same archetype in different institutions.** Run both early — if they come back structurally identical and visually distinct, the institution theme contract works. If they come back structurally different, the system has a hole.
 
-## Suggested order
+## Order
 
-1. **W1-03** first. A4 is the most common archetype in the catalogue and the densest test of the tokens.
-2. **W1-08** second, to validate re-theming.
-3. **W1-06** third — first dark-mode screen.
-4. Then the rest in any order.
+**Run them in file order, W1-01 through W1-13.** The numbering groups screens by institution, so you stay in one visual world at a time.
+
+Two comparisons worth making as you go — not orderings, just things to look at once you have them:
+
+- **W1-03 vs W1-08 vs W1-12** are all archetype A4. They should come back **structurally identical and visually distinct**. If they diverge structurally, the institution theme contract has a hole.
+- **W1-01** is the simplest screen in the set, which makes it a good check that the process works — instruction loaded, prompt understood, compliance report returned — before the denser screens.
 
 ## After each design
 

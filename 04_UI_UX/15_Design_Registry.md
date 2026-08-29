@@ -39,10 +39,7 @@ Thirteen screens covering all eleven archetypes, six institutions, both modes.
 
 ### Run order
 
-1. **W1-03** — densest test of the token system
-2. **W1-08** — same archetype, different institution. Validates the theme contract.
-3. **W1-06** — first dark-mode screen
-4. Everything else, any order
+**File order, W1-01 → W1-13.** Numbering groups screens by institution, so each run stays in one visual world.
 
 ---
 

@@ -7,7 +7,7 @@ The index of every designed screen. **A design is not done until it has a row he
 | **Last updated** | 2026-08-29 |
 | **Briefs** | [`briefs/`](briefs/) |
 | **Storage** | [`designs/`](designs/) |
-| **Review checklist** | [19_Screen_Brief_Template.md](19_Screen_Brief_Template.md#review-checklist) |
+| **Review checklist** | [14_Screen_Brief_Template.md](14_Screen_Brief_Template.md#review-checklist) |
 
 ## Status values
 
@@ -86,7 +86,7 @@ Wave 1 exists to find holes in the design system, not to produce final assets. W
 | W1-03, W1-08, W1-12 come back structurally different | The A4 archetype is underspecified, or the theme contract leaks |
 | Tier A creep — more than 3 per screen | The typography rules aren't landing; tighten the prompt |
 | Screens look clean and modern | Density and radius guidance is too weak. This is the most likely failure. |
-| Imperfections read as bugs | The imperfection catalogue needs to move into `18_Simulation_Realism.md` with examples |
+| Imperfections read as bugs | The imperfection catalogue needs to move into `13_Simulation_Realism.md` with examples |
 | Designer invents colours | Token file isn't specific enough, or the prompt isn't pointing at it hard enough |
 | Empty and error states get skipped | Make them separate deliverables rather than a list item |
 

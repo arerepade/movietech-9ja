@@ -41,8 +41,8 @@ designs/Law_Enforcement/Police_Database/03_Subject_Record/
 2. Scaffold the folder: `bash ../tools/new-design.sh <Category> <Simulation> <NN> <Screen_Name>`
 3. Save the canvas source into `source/`, exports into `exports/`.
 4. Fill in `RECORD.md`, including the artifact URL.
-5. Run the [review checklist](../19_Screen_Brief_Template.md#review-checklist) and record the result.
-6. Add the row to [`../20_Design_Registry.md`](../20_Design_Registry.md).
+5. Run the [review checklist](../14_Screen_Brief_Template.md#review-checklist) and record the result.
+6. Add the row to [`../15_Design_Registry.md`](../15_Design_Registry.md).
 
 **A design is not done until its `RECORD.md` is filled and the registry row exists.** Otherwise you have a picture nobody can find in three months.
 

@@ -6,7 +6,7 @@
 | **Owner** | _unassigned_ |
 | **Last updated** | 2026-08-29 |
 | **Scope** | In-world simulation UI |
-| **Related** | [Design Tokens](03_Design_Tokens.md) · [Layout](09_Layout_Principles.md) · [Interaction](15_Interaction_Principles.md) · [Screen Brief](19_Screen_Brief_Template.md) |
+| **Related** | [Design Tokens](03_Design_Tokens.md) · [Layout](06_Layout_Principles.md) · [Interaction](11_Interaction_Principles.md) · [Screen Brief](14_Screen_Brief_Template.md) |
 
 ## Contract
 
@@ -49,7 +49,7 @@ Plus, for data-bearing components: `empty` · `no-results` · `partial` · `stal
 | **Tab strip** | Tabs with counts, active underline at `--border-emphasis` | Deep tab strips are an authenticity signal. |
 | **Timeline / activity log** | Timestamped entries, actor, action, optional detail | Cheapest credibility per pixel in the system. |
 | **Key-value summary** | Compact stacked pairs | Rail content. |
-| **Stat tile** | Label, large value (Tier A or B), delta, sparkline | Dashboard grid. See [dataviz guidance](14_Data_Display.md). |
+| **Stat tile** | Label, large value (Tier A or B), delta, sparkline | Dashboard grid. See [dataviz guidance](10_Data_Display.md). |
 | **Media pane** | Image/scan/feed, caption, metadata strip, zoom controls | Mugshots, biometrics, camera feeds. |
 | **Map canvas** | Map, entity pins, control panel, legend, timeline scrubber | Never colour-only encoding. |
 | **Document view** | Paginated serif body, letterhead, seal area, signature block | Archetype A11. |

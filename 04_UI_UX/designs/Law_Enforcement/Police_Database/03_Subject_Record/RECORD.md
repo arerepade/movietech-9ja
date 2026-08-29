@@ -54,7 +54,7 @@ Subject name at 36px (`--type-hero`), panel headings at 20px (`--type-title`). D
 
 **2. Cue banners were not in the vertical budget.** A `--z-cue` banner on a fixed 1080 canvas steals height from content. At 52px the last case-history row clipped; it took a 44px banner plus a reclaimed 14px spacer to fit.
 
-*Fixed 2026-08-29 in [`09_Layout_Principles.md`](../../../../09_Layout_Principles.md):* the cue banner is now reserved shell space at 44px, and the working content budget is stated as 948px rather than 992px.
+*Fixed 2026-08-29 in [`06_Layout_Principles.md`](../../../../06_Layout_Principles.md):* the cue banner is now reserved shell space at 44px, and the working content budget is stated as 948px rather than 992px.
 
 ## Open issues
 

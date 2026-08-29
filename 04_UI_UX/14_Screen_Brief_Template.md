@@ -6,7 +6,7 @@
 | **Owner** | _unassigned_ |
 | **Last updated** | 2026-08-29 |
 | **Purpose** | The standard input for designing one simulation screen |
-| **Related** | [Principles](01_Design_Principles.md) · [Tokens](03_Design_Tokens.md) · [Colour](04_Color_System.md) · [Typography](05_Typography.md) · [Layout](09_Layout_Principles.md) · [Components](13_Component_Library.md) |
+| **Related** | [Principles](01_Design_Principles.md) · [Tokens](03_Design_Tokens.md) · [Colour](04_Color_System.md) · [Typography](05_Typography.md) · [Layout](06_Layout_Principles.md) · [Components](09_Component_Library.md) |
 
 ## How to use this
 
@@ -33,7 +33,7 @@ Then paste the **Ready-to-use prompt** at the bottom, with your filled brief, to
 
 ### The screen
 - Screen name:           [e.g. Subject Record — Detail]
-- Archetype:             [A1-A11, see 09_Layout_Principles.md]
+- Archetype:             [A1-A11, see 06_Layout_Principles.md]
 - Module path:           [e.g. Records > Subjects > Detail]
 
 ### The scene
@@ -139,8 +139,8 @@ Read these first and follow them exactly:
 - 04_UI_UX/03_Design_Tokens.md       (use semantic tokens ONLY, never raw hex)
 - 04_UI_UX/04_Color_System.md        (institution palette)
 - 04_UI_UX/05_Typography.md          (three-tier legibility system)
-- 04_UI_UX/09_Layout_Principles.md   (shell + archetype + frame-safe zones)
-- 04_UI_UX/13_Component_Library.md   (component contracts + states)
+- 04_UI_UX/06_Layout_Principles.md   (shell + archetype + frame-safe zones)
+- 04_UI_UX/09_Component_Library.md   (component contracts + states)
 
 Canvas: 1920x1080.
 
@@ -170,12 +170,12 @@ Before a screen is accepted:
 | All four non-negotiables satisfied | [Principles](01_Design_Principles.md) |
 | ≤ 3 Tier A elements | [Typography](05_Typography.md) |
 | Nothing below 13px, nothing below weight 400 | [Typography](05_Typography.md) |
-| Tier A clear of edges and hand zone | [Layout](09_Layout_Principles.md) |
+| Tier A clear of edges and hand zone | [Layout](06_Layout_Principles.md) |
 | Semantic tokens only, no raw hex | [Tokens](03_Design_Tokens.md) |
 | Status carries label or icon, never colour alone | [Colour](04_Color_System.md) |
-| Clock and status bar present | [Layout](09_Layout_Principles.md) |
-| Loading, empty, and error states designed | [Components](13_Component_Library.md) |
+| Clock and status bar present | [Layout](06_Layout_Principles.md) |
+| Loading, empty, and error states designed | [Components](09_Component_Library.md) |
 | 2–3 imperfections, no more | [Principles](01_Design_Principles.md) |
 | Dates `DD/MM/YYYY`, currency `₦`, region-correct names | [Typography](05_Typography.md) |
 | Every colour pair measured | [`tools/contrast.awk`](tools/README.md) |
-| Screen fills the canvas — no mockup margins | [Layout](09_Layout_Principles.md) |
+| Screen fills the canvas — no mockup margins | [Layout](06_Layout_Principles.md) |

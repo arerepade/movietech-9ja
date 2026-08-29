@@ -7,7 +7,7 @@
 | **Last updated** | 2026-08-29 |
 | **Scope** | In-world simulation UI (the fictional software). Platform SaaS UI is out of scope. |
 | **Default region** | Nigeria / West Africa |
-| **Related** | [Design Principles](01_Design_Principles.md) · [Colour](04_Color_System.md) · [Typography](05_Typography.md) · [Components](13_Component_Library.md) |
+| **Related** | [Design Principles](01_Design_Principles.md) · [Colour](04_Color_System.md) · [Typography](05_Typography.md) · [Components](09_Component_Library.md) |
 
 ## Why this file exists
 

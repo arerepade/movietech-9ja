@@ -7,7 +7,7 @@
 | **Last updated** | 2026-08-29 |
 | **Scope** | In-world simulation UI |
 | **Default region** | Nigeria / West Africa |
-| **Related** | [Design Tokens](03_Design_Tokens.md) · [Typography](05_Typography.md) · [Themes](11_Themes.md) · [Legal](../09_Legal/) |
+| **Related** | [Design Tokens](03_Design_Tokens.md) · [Typography](05_Typography.md) · [Themes](08_Themes.md) · [Legal](../09_Legal/) |
 
 ## Principles that govern colour here
 

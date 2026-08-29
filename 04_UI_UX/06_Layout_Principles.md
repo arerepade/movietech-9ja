@@ -6,13 +6,13 @@
 | **Owner** | _unassigned_ |
 | **Last updated** | 2026-08-29 |
 | **Scope** | In-world simulation UI |
-| **Related** | [Design Principles](01_Design_Principles.md) · [Grid](08_Grid_System.md) · [Components](13_Component_Library.md) · [Screen Brief](19_Screen_Brief_Template.md) |
+| **Related** | [Design Principles](01_Design_Principles.md) · [Components](09_Component_Library.md) · [Screen Brief](14_Screen_Brief_Template.md) |
 
 ## Canvas
 
 Design at **1920 × 1080**. It is the delivery reference, the most common monitor in frame, and it maps cleanly to 4K capture.
 
-Other targets — phone inserts, wall displays, 4:3 legacy monitors — are variants of the archetypes below, not separate designs. See [Responsive Design](10_Responsive_Design.md).
+Other targets — phone inserts, wall displays, 4:3 legacy monitors — are variants of the archetypes below, not separate designs. See [Responsive Design](07_Responsive_Design.md).
 
 ## Frame-safe zones
 

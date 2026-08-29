@@ -6,7 +6,7 @@
 | **Owner** | _unassigned_ |
 | **Last updated** | 2026-08-09 |
 | **Applies to** | Every simulation, screen, component, and interaction on the platform |
-| **Related** | [Simulation Realism](18_Simulation_Realism.md) · [Design Tokens](03_Design_Tokens.md) · [Accessibility](17_Accessibility.md) · [Data](../06_Data/) · [Legal](../09_Legal/) |
+| **Related** | [Simulation Realism](13_Simulation_Realism.md) · [Design Tokens](03_Design_Tokens.md) · [Accessibility](12_Accessibility.md) · [Data](../06_Data/) · [Legal](../09_Legal/) |
 
 ## Purpose
 
@@ -128,7 +128,7 @@ A complete feature set is not imperfection. These are:
 - A stale notification badge counting something no longer relevant
 - An empty state that was clearly written by an engineer
 
-Imperfection must be **deliberate, catalogued, and consistent** — a designed layer, not sloppiness. It is a component library of its own. See [`18_Simulation_Realism.md`](18_Simulation_Realism.md).
+Imperfection must be **deliberate, catalogued, and consistent** — a designed layer, not sloppiness. It is a component library of its own. See [`13_Simulation_Realism.md`](13_Simulation_Realism.md).
 
 Alongside it, the credibility furniture every real system has: loading indicators, timestamps, activity logs, search history, session and user chrome, status indicators, recently-viewed lists, pagination, empty states.
 
@@ -181,7 +181,7 @@ Screens are photographed, not used. This shapes design in ways no conventional d
 - **Composition in frame.** Assume the screen is partly occluded — an actor's hand, an over-shoulder framing, a shallow depth of field. Story-critical content sits away from edges and away from where a hand naturally rests.
 - **Capture artefacts.** Avoid patterns that moiré, saturated reds that smear under compression, and fine repeating textures. Account for shutter/refresh interaction; prefer designs that survive it.
 - **Motion under capture.** Anything animating during a take must be stable at the shooting frame rate.
-- **Multiple aspect ratios and resolutions.** A screen may appear on a 16:9 monitor, a phone insert, or a wall display. Layouts adapt without redesign. See [`10_Responsive_Design.md`](10_Responsive_Design.md).
+- **Multiple aspect ratios and resolutions.** A screen may appear on a 16:9 monitor, a phone insert, or a wall display. Layouts adapt without redesign. See [`07_Responsive_Design.md`](07_Responsive_Design.md).
 
 These are requirements, not suggestions, and they are the ones most likely to be discovered too late. **Every simulation should pass a camera test before it ships.**
 
@@ -242,7 +242,7 @@ Accessibility applies to three distinct users, and conflating them produces vagu
 2. **The audience** — the accessibility question is legibility at distance and under compression, which is already governed by P2. Contrast and type-size floors are hard requirements here.
 3. **The actor** — needs reliable keyboard operation, clear focus states, and unambiguous feedback. Covered by P4.
 
-For the simulation surface itself, the standards that survive the realism trade-off are: contrast floors, readable type, visible focus, unambiguous labelling, and consistent interaction patterns. These are not in tension with realism — they are what makes it legible. Details in [`17_Accessibility.md`](17_Accessibility.md).
+For the simulation surface itself, the standards that survive the realism trade-off are: contrast floors, readable type, visible focus, unambiguous labelling, and consistent interaction patterns. These are not in tension with realism — they are what makes it legible. Details in [`12_Accessibility.md`](12_Accessibility.md).
 
 ---
 

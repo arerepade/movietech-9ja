@@ -38,7 +38,7 @@ node tools/build-briefs.mjs     # from 04_UI_UX/
 
 The per-screen half (everything from `## SCREEN BRIEF` down) is safe to edit directly; the script never touches it.
 
-When the design system changes in `03_Design_Tokens.md`, `05_Typography.md`, `04_Color_System.md`, `09_Layout_Principles.md` or `13_Component_Library.md`, mirror the change into `_DESIGN_SPEC.md` and rebuild — otherwise the prompts drift from the system they are supposed to enforce.
+When the design system changes in `03_Design_Tokens.md`, `05_Typography.md`, `04_Color_System.md`, `06_Layout_Principles.md` or `09_Component_Library.md`, mirror the change into `_DESIGN_SPEC.md` and rebuild — otherwise the prompts drift from the system they are supposed to enforce.
 
 ## Naming
 
@@ -77,10 +77,10 @@ Thirteen screens chosen to exercise **all eleven archetypes**, **six institution
 
 ## After each design
 
-1. Run the [review checklist](../19_Screen_Brief_Template.md#review-checklist).
+1. Run the [review checklist](../14_Screen_Brief_Template.md#review-checklist).
 2. Store it per [`designs/README.md`](../designs/README.md).
-3. Update [`20_Design_Registry.md`](../20_Design_Registry.md).
+3. Update [`15_Design_Registry.md`](../15_Design_Registry.md).
 
 ## Adding a brief
 
-Create `W1-14_<INSTITUTION>_<Screen>.md` with just a title header, a `---` rule, and a `## SCREEN BRIEF` section following the template in [`19_Screen_Brief_Template.md`](../19_Screen_Brief_Template.md). Then run `node tools/build-briefs.mjs` — it splices the spec block in for you.
+Create `W1-14_<INSTITUTION>_<Screen>.md` with just a title header, a `---` rule, and a `## SCREEN BRIEF` section following the template in [`14_Screen_Brief_Template.md`](../14_Screen_Brief_Template.md). Then run `node tools/build-briefs.mjs` — it splices the spec block in for you.

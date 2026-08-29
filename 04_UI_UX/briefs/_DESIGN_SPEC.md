@@ -1,8 +1,3 @@
-Design a screen for a film/TV software simulation platform. This is fictional software built to be **filmed**, not used.
-
-**Canvas: 1920 × 1080.** Deliver one artboard per state listed at the end.
-
----
 
 ## 1. WHAT THIS IS
 

@@ -10,7 +10,7 @@ Running several screens in one Claude Designer project? Load [`00_DESIGN_INSTRUC
 
 Design a screen for a film/TV software simulation platform. This is fictional software built to be **filmed**, not used.
 
-**Canvas: 1920 × 1080.** Deliver one artboard per state listed at the end.
+**Canvas: 1920 × 1080.** Deliver one artboard per state listed at the end, and finish with the compliance report.
 
 ---
 

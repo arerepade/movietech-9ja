@@ -44,17 +44,18 @@ All five at 1920×1080. `source/build-states.mjs` regenerates the four variants 
 
 ## Notes
 
-**Two deviations from the type spec, both deliberate — see Open issues.**
+Subject name at 36px (`--type-hero`), panel headings at 20px (`--type-title`). Default status pill reads `SUBJECT OF INTEREST` (neutral, Tier B treatment); the operator cue flips it to `WANTED` in `--status-critical` at 36px tall / 18px-700 and drops a 44px `--z-cue` banner below the top bar.
 
-- Subject name uses `--type-hero` (36/700) rather than `--type-title-lg` (28/600).
-- Panel headings use 20px/600 rather than `--type-title` (24/600).
+## Design-system defects found — both now fixed upstream
 
-Default status pill reads `SUBJECT OF INTEREST` (neutral); the operator cue flips it to `WANTED` in `--status-critical` and drops a 44px `--z-cue` banner below the top bar.
+**1. Tier A / Tier B type step was too narrow.** `--type-title-lg` (28) and `--type-title` (24) sat 4px apart, so a Tier A subject name and a Tier B panel heading read as almost the same size — the hierarchy collapsed at distance, which is exactly what Principle 2 exists to prevent.
+
+*Fixed 2026-08-29 in [`05_Typography.md`](../../../../05_Typography.md):* the scale now has a deliberate 12px dead band — Tier A floors at 32, Tier B ceilings at 20. Added `--type-data-hero` (32/500) for Tier A monospace, and a **"Tier A by treatment"** rule so status pills and banners can qualify by fill and size rather than by type size alone. This screen's values are now compliant as built.
+
+**2. Cue banners were not in the vertical budget.** A `--z-cue` banner on a fixed 1080 canvas steals height from content. At 52px the last case-history row clipped; it took a 44px banner plus a reclaimed 14px spacer to fit.
+
+*Fixed 2026-08-29 in [`09_Layout_Principles.md`](../../../../09_Layout_Principles.md):* the cue banner is now reserved shell space at 44px, and the working content budget is stated as 948px rather than 992px.
 
 ## Open issues
 
-**1. The type scale has a weak Tier A step.** `--type-title-lg` (28) and `--type-title` (24) sit 4px apart, so a Tier A subject name and a Tier B panel heading read as almost the same size — the hierarchy collapses at a distance, which is exactly what Principle 2 exists to prevent. Worked around here by pushing the name to 36 and pulling panel headings to 20. **The scale should be fixed in `05_Typography.md`,** not worked around per screen. Suggest widening the gap: Tier A floor at 32+, Tier B headings capped at 20.
-
-**2. Cue banners are not in the vertical budget.** A `--z-cue` banner on a fixed 1080 canvas steals height from content. At 52px the last table row clipped; it took a 44px banner plus removing a 14px spacer to fit. `09_Layout_Principles.md` should state a cue-banner height (44px) and require archetypes to reserve it.
-
-**3. Not validated on camera or in a browser.** Sizes come from the provisional scale. No render was inspected.
+**Not validated on camera or in a browser.** Sizes come from the provisional scale, and no render was inspected. This remains true of every screen until the camera test happens.

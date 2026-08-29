@@ -37,6 +37,8 @@ Every simulation uses the same skeleton. Institutions differ in colour, mark, an
 +--------------------------------------------------------------+
 |  TOP BAR                                              56px   |  <- brand chrome
 |  [mark] Institution · Module        search   user  clock     |
++--------------------------------------------------------------+
+|  CUE BANNER (reserved, absent by default)             44px   |  <- --z-cue
 +---------+----------------------------------------------------+
 |         |                                                    |
 |  NAV    |   CONTENT                                          |
@@ -54,10 +56,21 @@ Every simulation uses the same skeleton. Institutions differ in colour, mark, an
 | Region | Size | Contains |
 |---|---|---|
 | Top bar | 56px | Institution mark and name, active module, global search, user, live clock |
+| **Cue banner** | **44px** | **Reserved. Empty in normal states; carries operator-triggered alerts.** |
 | Nav | 260px | Module list, grouped, with counts. Collapsible to 56px icon rail |
 | Content | fluid | The screen archetype |
 | Rail | 320px | Context: activity log, related records, alerts. Optional |
 | Status bar | 32px | Connection state, session, environment, record counts |
+
+### The cue banner is reserved space, not extra space
+
+Every archetype must **budget 44px below the top bar for a cue banner**, even though it is absent in the default state. An operator-triggered alert (`--z-cue`) appears there when a director calls for it.
+
+This is easy to get wrong and expensive to fix late. On a fixed 1920×1080 canvas the height is finite: if the default state fills all 992px between the top and status bars, then firing a cue pushes the last table row off the screen. The screen breaks precisely at the dramatic moment it exists for.
+
+So the working content budget is **948px, not 992px** — assume the banner is always there. A screen that only fits without it is not finished.
+
+*Found the hard way on W1-03: a 52px banner clipped the last case-history row, and it took a 44px banner plus a reclaimed spacer to fit.*
 
 **The status bar and clock are non-negotiable.** A live, correct, regionally formatted clock is the single cheapest credibility signal in the system, and its absence is the most common tell in bad screen work.
 

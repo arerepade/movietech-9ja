@@ -54,7 +54,7 @@ A teller under duress enters a large transfer. The system blocks it at the limit
 - **Form panel**, centre-left, in the frame-safe zone:
   - Section 1 — Source: debit account selector (masked), available balance
   - Section 2 — Beneficiary: account number, bank selector, account name (auto-filled, read-only), save-beneficiary checkbox
-  - Section 3 — Instruction: amount (large, `--type-data-lg`, Tier A), narration, value date, charge-bearer selector
+  - Section 3 — Instruction: amount (large, `--type-data-hero` 32/500, Tier A), narration, value date, charge-bearer selector
   - Actions: `Submit Instruction` (primary), `Save Draft` (secondary), `Cancel` (tertiary)
 - **Rail:** Today's instructions by this teller — 5 rows, timestamped, with status pills
 - **Step indicator** above the form: Capture › Verify › Authorise — currently on Capture

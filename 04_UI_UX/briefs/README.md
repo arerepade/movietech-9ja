@@ -1,6 +1,28 @@
 # Screen Briefs
 
-Paste-ready prompts for Claude Design. One file per screen. Each file is **self-contained** — open it, copy the whole thing, paste it. Nothing to assemble.
+Paste-ready prompts for Claude Designer. One file per screen.
+
+**Each file is fully self-contained.** The complete design system — palette, type scale, layout shell, component rules, region formatting — is written into every prompt. Nothing references a repo file, so they work in the browser where Claude Designer cannot read this repository.
+
+Open a file, copy everything below the horizontal rule, paste it. That's the whole workflow.
+
+## How these are built
+
+| File | Role |
+|---|---|
+| `_DESIGN_SPEC.md` | The shared design-system block, inlined into every brief. **Single source of truth.** |
+| `W1-*.md` | Generated. Header + spec block + that screen's brief. |
+| `../tools/build-briefs.mjs` | Rebuilds all 13 from `_DESIGN_SPEC.md` |
+
+**Do not hand-edit the spec block inside a `W1-*.md` file** — it will be overwritten. Edit `_DESIGN_SPEC.md` and re-run:
+
+```bash
+node tools/build-briefs.mjs     # from 04_UI_UX/
+```
+
+The per-screen half (everything from `## SCREEN BRIEF` down) is safe to edit directly; the script never touches it.
+
+When the design system changes in `03_Design_Tokens.md`, `05_Typography.md`, `04_Color_System.md`, `09_Layout_Principles.md` or `13_Component_Library.md`, mirror the change into `_DESIGN_SPEC.md` and rebuild — otherwise the prompts drift from the system they are supposed to enforce.
 
 ## Naming
 
@@ -45,4 +67,4 @@ Thirteen screens chosen to exercise **all eleven archetypes**, **six institution
 
 ## Adding a brief
 
-Copy the template in [`19_Screen_Brief_Template.md`](../19_Screen_Brief_Template.md) and keep the same preamble block that every file here starts with. If the preamble changes, it changes in all of them.
+Create `W1-14_<INSTITUTION>_<Screen>.md` with just a title header, a `---` rule, and a `## SCREEN BRIEF` section following the template in [`19_Screen_Brief_Template.md`](../19_Screen_Brief_Template.md). Then run `node tools/build-briefs.mjs` — it splices the spec block in for you.

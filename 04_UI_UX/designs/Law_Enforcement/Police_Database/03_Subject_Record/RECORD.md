@@ -4,36 +4,57 @@
 |---|---|
 | Brief        | ../../../../briefs/W1-03_NBCR_Subject_Record.md |
 | Simulation   | Police_Database |
-| Institution  | TODO |
-| Archetype    | TODO |
-| Mode         | TODO |
+| Institution  | National Bureau of Criminal Records (NBCR) |
+| Archetype    | A4 Record / Case File |
+| Mode         | light |
 | Era          | era-current |
-| Artifact URL | TODO |
+| Artifact URL | not published — publish blocked by permission classifier |
+| Local canvas | `source/nbcr-subject-record.html` (open in a browser) |
 | Status       | draft |
 | Designed     | 2026-08-29 |
 | Reviewed by  | |
 
 ## States delivered
-- [ ] default
-- [ ] loading
-- [ ] empty
-- [ ] error
-- [ ] cue: TODO
+- [x] default — `source/Main.dc.html`
+- [x] loading — `source/Loading.dc.html`
+- [x] empty — `source/Empty.dc.html`
+- [x] error — `source/Error.dc.html`
+- [x] cue: FLAG AS WANTED — `source/Cue.dc.html`
+
+All five at 1920×1080. `source/build-states.mjs` regenerates the four variants from `Main.dc.html`, so the shared shell cannot drift between artboards — edit `Main.dc.html`, re-run the script, re-seed.
 
 ## Review checklist
-- [ ] Non-negotiables N1-N4 satisfied
-- [ ] <= 3 Tier A elements
-- [ ] Nothing below 13px / weight 400
-- [ ] Tier A clear of edges and hand zone
-- [ ] Semantic tokens only, no raw hex
-- [ ] Status never colour-only
-- [ ] Clock and status bar present
-- [ ] loading / empty / error designed
-- [ ] 2-3 imperfections, no more
-- [ ] Dates DD/MM/YYYY, currency Naira, region-correct names
-- [ ] Colour pairs measured with tools/contrast.awk
-- [ ] Fills the canvas, no mockup margins
+- [x] Non-negotiables N1-N4 satisfied — fictional NBCR, synthetic invalid ID `99004418272`, no operable content, no platform branding
+- [x] <= 3 Tier A elements — subject name, status pill, 2019 conviction row
+- [x] Nothing below 13px / weight 400
+- [x] Tier A clear of edges and hand zone — name at x≈284/y≈150; conviction row spans x 300–900, left of the bottom-right quadrant
+- [x] Semantic tokens only, no raw hex — token *values* used literally (`.dc.html` has no token layer); every colour traces to a token
+- [x] Status never colour-only — every pill and disposition pairs colour with icon and label
+- [x] Clock and status bar present — live clock top right, 32px status bar
+- [x] loading / empty / error designed
+- [x] 2-3 imperfections, no more — exactly 3
+- [x] Dates DD/MM/YYYY, currency Naira, region-correct names
+- [x] Colour pairs measured — reuses pairs already measured in `03_Design_Tokens.md`
+- [x] Fills the canvas, no mockup margins
+
+## Imperfections used
+1. `CLASS_CD` — cryptic field label in Biographic detail
+2. `DISPOSITI…` — truncated column header in Case history
+3. Stale badge `3` on the Alerts nav item
 
 ## Notes
 
+**Two deviations from the type spec, both deliberate — see Open issues.**
+
+- Subject name uses `--type-hero` (36/700) rather than `--type-title-lg` (28/600).
+- Panel headings use 20px/600 rather than `--type-title` (24/600).
+
+Default status pill reads `SUBJECT OF INTEREST` (neutral); the operator cue flips it to `WANTED` in `--status-critical` and drops a 44px `--z-cue` banner below the top bar.
+
 ## Open issues
+
+**1. The type scale has a weak Tier A step.** `--type-title-lg` (28) and `--type-title` (24) sit 4px apart, so a Tier A subject name and a Tier B panel heading read as almost the same size — the hierarchy collapses at a distance, which is exactly what Principle 2 exists to prevent. Worked around here by pushing the name to 36 and pulling panel headings to 20. **The scale should be fixed in `05_Typography.md`,** not worked around per screen. Suggest widening the gap: Tier A floor at 32+, Tier B headings capped at 20.
+
+**2. Cue banners are not in the vertical budget.** A `--z-cue` banner on a fixed 1080 canvas steals height from content. At 52px the last table row clipped; it took a 44px banner plus removing a 14px spacer to fit. `09_Layout_Principles.md` should state a cue-banner height (44px) and require archetypes to reserve it.
+
+**3. Not validated on camera or in a browser.** Sizes come from the provisional scale. No render was inspected.

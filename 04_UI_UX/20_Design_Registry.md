@@ -25,7 +25,7 @@ Thirteen screens covering all eleven archetypes, six institutions, both modes.
 |---|---|---|---|---|---|---|
 | W1-01 | NBCR | Login | A1 Authentication | Light | not started | — |
 | W1-02 | NBCR | Subject Search | A5 Search & Results | Light | not started | — |
-| W1-03 | NBCR | Subject Record | A4 Record / Case File | Light | not started | [scaffolded](designs/Law_Enforcement/Police_Database/03_Subject_Record/RECORD.md) |
+| W1-03 | NBCR | Subject Record | A4 Record / Case File | Light | **designed** | [RECORD](designs/Law_Enforcement/Police_Database/03_Subject_Record/RECORD.md) |
 | W1-04 | NBCR | Wanted Queue | A3 List / Queue | Light | not started | — |
 | W1-05 | NBCR | Access Denied | A10 Alert / Interrupt | Light | not started | — |
 | W1-06 | COD | SOC Dashboard | A2 Dashboard / Monitor | Dark | not started | — |

@@ -9,11 +9,11 @@
 | Mode         | light |
 | Era          | era-current |
 | Artifact URL | — (delivered as a downloaded `.dc.html`) |
-| Local source | `source/Main.dc.html` (was `NBCR Login.dc.html` in Downloads) |
-| Status       | designed — reviewed and patched |
+| Local source | `source/Main.dc.html` — Claude Designer corrected version |
+| Status       | designed — fixes verified |
 | Designed     | 2026-08-29 |
 | Reviewed by  | Claude, 2026-08-29 |
-| Patched      | Claude, 2026-08-29 — 3 fixes, see below |
+| Patched      | Claude Designer, 2026-08-29 — all 3 fixes applied at source and verified |
 
 ## States delivered
 - [x] default
@@ -73,11 +73,25 @@ The "Tier A by treatment" rule said *saturated status fill*. Patching this scree
 
 Updated in [`05_Typography.md`](../../../../05_Typography.md) and `briefs/_DESIGN_SPEC.md`: the fill may be a status colour **or** the institution chrome, chosen by meaning — status colours assert state, chrome carries standing emphasis. Also spells out that an outline is not a fill, which is what this screen got wrong.
 
-## Not delivered
+## Round 2 — fixes applied at source, verified 2026-08-29
 
-**No compliance report.** The spec requires one with every screen — tier assignments, type range, off-palette colours, shell dimensions, density, frame-safe check, states, imperfections, deviations. Issue 1 is exactly what the `TYPE: largest __ smallest __ (nothing 21-31)` line exists to catch, so it would have been self-reported.
+Claude Designer applied all three fixes in its own session; that version replaced the local copy, so there is one source of truth again.
 
-Ask for it on the next screen; if Claude Designer is not producing it, the instruction needs strengthening.
+Verified on the returned file:
+- Sizes: **13, 15, 16, 18, 20, 32, 36** — no sub-13px, no dead-band values
+- Officer ID 32px/500 mono in a 52px field
+- Restricted notice filled `#103866`, white text and icon, 48px
+- Logo mark 13px
+- Shell intact: 56 / 44 / 44-reserved / 32
+- All four states still present; imperfections and palette untouched
+
+It also made one improvement I had not asked for: it **dropped the `border:2px solid #103866`** from the restricted notice, which was the same colour as the fill and therefore did nothing. My patched version still carried it. Its version is the cleaner one and is what is stored.
+
+## Still not delivered
+
+**No compliance report, in either round.** The spec requires one with every screen. Its `TYPE: largest __ smallest __ (nothing 21-31)` line would have caught two of the three issues before they reached review.
+
+Two rounds without one means the closing request is not working. **Make it a hard gate in `_DESIGN_SPEC.md` before W1-03** — the report should be a required deliverable alongside the artboards, not a sign-off line.
 
 ## Structural note
 

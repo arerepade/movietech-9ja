@@ -81,4 +81,4 @@ echo "  RECORD.md"
 echo "  exports/"
 echo "  source/"
 echo
-echo "next: fill RECORD.md, then add the row to 20_Design_Registry.md"
+echo "next: fill RECORD.md, then add the row to 15_Design_Registry.md"

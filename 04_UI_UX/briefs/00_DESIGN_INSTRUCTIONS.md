@@ -51,7 +51,11 @@ Reduce **count**, never **apparent density**: fewer table rows, but the same tig
 
 **Hard floor: nothing below 13px, nothing below weight 400.** Sub-13px text and thin strokes shimmer and alias under capture.
 
-**Tier A by treatment.** A status pill cannot be 32px type. An element also qualifies as Tier A by treatment: a saturated status fill ≥36px tall with 18px/700 type, or a full-width banner ≥44px tall — each carrying an icon *and* a label. A neutral pill that is not the story beat stays Tier B: 30px tall, 15px/600, outlined not filled.
+**Tier A by treatment.** A status pill cannot be 32px type. An element also qualifies as Tier A by treatment: a **filled** block ≥36px tall with 18px/700 type, or a full-width banner ≥44px tall — each carrying an icon *and* a label. An outline is not a fill; a white box with a grey border is Tier B no matter how bold the text.
+
+Fill with either a status colour **or** the institution chrome, chosen by meaning: status colours assert a state (critical = alert, breach, denied, failure). A standing notice that is merely important — a restricted-system banner, a classification strip — is not an alert. Fill those with institution chrome and keep the status palette for actual state, or the real alert has nothing left to say.
+
+A neutral pill that is not the story beat stays Tier B: 30px tall, 15px/600, outlined not filled.
 
 ## 4. TYPE SCALE
 

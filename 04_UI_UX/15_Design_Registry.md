@@ -23,7 +23,7 @@ Thirteen screens covering all eleven archetypes, six institutions, both modes.
 
 | # | Institution | Screen | Archetype | Mode | Status | Record |
 |---|---|---|---|---|---|---|
-| W1-01 | NBCR | Login | A1 Authentication | Light | **needs rework** | [RECORD](designs/Law_Enforcement/Police_Database/01_Login/RECORD.md) |
+| W1-01 | NBCR | Login | A1 Authentication | Light | **designed** | [RECORD](designs/Law_Enforcement/Police_Database/01_Login/RECORD.md) |
 | W1-02 | NBCR | Subject Search | A5 Search & Results | Light | not started | — |
 | W1-03 | NBCR | Subject Record | A4 Record / Case File | Light | **designed** | [RECORD](designs/Law_Enforcement/Police_Database/03_Subject_Record/RECORD.md) |
 | W1-04 | NBCR | Wanted Queue | A3 List / Queue | Light | not started | — |

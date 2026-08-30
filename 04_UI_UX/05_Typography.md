@@ -114,7 +114,9 @@ Some Tier A elements cannot be 32px type — a status pill at 32px is absurd. Ti
 So an element qualifies as Tier A by **either** route:
 
 - **By size** — 32px or larger, weight 600+, contrast ≥ 7:1; or
-- **By treatment** — a saturated status fill at ≥ 36px tall with ≥ 18px/700 type, or a full-width banner at ≥ 44px tall, carrying an icon as well as a label.
+- **By treatment** — a **filled** block at ≥ 36px tall with ≥ 18px/700 type, or a full-width banner at ≥ 44px tall, carrying an icon as well as a label. The fill is either a `--status-*` colour **or** the institution's `--brand-chrome-bg`.
+
+**Choose the fill by meaning, not by loudness.** A status colour asserts a state — critical means alert, breach, denied, failure. A standing notice that is simply important (a restricted-system banner, a classification strip) is not an alert, and filling it with critical red cries wolf: when a real alert fires in the same frame, the two compete. Use the institution chrome for standing emphasis and reserve the status palette for actual state.
 
 A status pill that matters to the scene takes the treatment route: 36px tall, 18px/700, full `--status-*` fill, white or near-black label, plus icon. A neutral pill that is *not* the story beat stays Tier B — 30px tall, 15px/600, outlined rather than filled. **The same component sits in different tiers in different states**, and that difference is the point: it is what makes the operator cue land.
 

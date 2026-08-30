@@ -10,9 +10,10 @@
 | Era          | era-current |
 | Artifact URL | — (delivered as a downloaded `.dc.html`) |
 | Local source | `source/Main.dc.html` (was `NBCR Login.dc.html` in Downloads) |
-| Status       | needs rework |
+| Status       | designed — reviewed and patched |
 | Designed     | 2026-08-29 |
 | Reviewed by  | Claude, 2026-08-29 |
+| Patched      | Claude, 2026-08-29 — 3 fixes, see below |
 
 ## States delivered
 - [x] default
@@ -24,8 +25,8 @@ All four present. Delivered as **one artboard containing four stacked 1920×1080
 
 ## Review checklist
 - [x] Non-negotiables N1–N4 — NBCR fictional, officer ID `NBCR/LAG-08841` synthetic, nothing operable, no platform branding
-- [ ] **≤ 3 Tier A elements** — only 1 of the 3 briefed Tier A elements actually reaches Tier A (see Issue 2)
-- [ ] **Nothing below 13px / weight 400** — floor respected, but a 24px value sits in the Tier A/B dead band (see Issue 1)
+- [x] **≤ 3 Tier A elements** — all 3 briefed elements now reach Tier A
+- [x] **Nothing below 13px / weight 400, no dead-band sizes** — after patching
 - [x] Tier A clear of edges — 154px horizontal padding matches the 8% inset exactly
 - [x] Palette from spec — every colour traces to a token; no invented colours
 - [x] Status never colour-only — error and cue both pair colour with icon and label
@@ -51,14 +52,26 @@ Better than expected on the things that are easy to miss:
 - `SESSION: —` in the status bar for a not-yet-authenticated session — an unprompted, genuinely authentic detail.
 - Palette discipline is total: no colour appears that is not in the spec.
 
-## Issues — 2 to fix
+## Issues found — all 3 patched 2026-08-29
 
-**1. `24px` officer ID sits in the Tier A/B dead band.**
-`source/Main.dc.html:63` — `font:500 24px/1.2 'IBM Plex Mono'`. The scale forbids 21–31px; that gap *is* the hierarchy. The brief lists the officer ID as Tier A, so it should be `--type-data-hero` at **32px/500**.
+**1. `24px` officer ID sat in the Tier A/B dead band.** *(fixed)*
+`Main.dc.html:63` was `font:500 24px/1.2 'IBM Plex Mono'`. The scale forbids 21–31px; that gap *is* the hierarchy. Now **32px/500** (`--type-data-hero`), which is its correct Tier A size. The field box went 44px → 52px to hold it.
 
-**2. The `RESTRICTED SYSTEM` notice does not reach Tier A.**
-`source/Main.dc.html:54-57` — 18px/700 in a white box with a `#C6C2B8` border. That is Tier B treatment. The brief lists it as Tier A, and Tier A by treatment requires a **saturated fill**, not a neutral outline. As drawn it reads as a label rather than a warning.
-Fix: fill the strip with `--status-critical` `#B3261E` and white text (6.54:1, measured), or drop it to Tier B and accept only two Tier A elements.
+**2. The `RESTRICTED SYSTEM` notice did not reach Tier A.** *(fixed)*
+`Main.dc.html:54-57` was 18px/700 in a white box with a `#C6C2B8` border — an outline, not a fill, so Tier B treatment despite being briefed as Tier A. Now filled with institution chrome `#103866`, white text and icon, 48px tall (**11.80:1**, measured).
+
+Filled with **chrome, not critical red**, deliberately: a standing restriction notice is not an alert. Red here would compete with the ACCOUNT LOCKED cue banner in the fourth state and blunt it. This refined the spec — see below.
+
+**3. `11px` logo mark, below the 13px hard floor.** *(fixed)*
+`Main.dc.html:26` — the `NB` glyph in the top-bar mark. **Missed in the first review pass**, caught by auditing every font size in the file. Now 13px (`#F7F6F3` on `#1B5FA8`, 5.98:1, measured).
+
+**Font sizes after patching: 13, 15, 16, 18, 20, 32, 36.** No dead-band values, nothing below the floor.
+
+## Spec change this produced
+
+The "Tier A by treatment" rule said *saturated status fill*. Patching this screen showed that was too narrow: a standing notice needs Tier A weight without asserting a state.
+
+Updated in [`05_Typography.md`](../../../../05_Typography.md) and `briefs/_DESIGN_SPEC.md`: the fill may be a status colour **or** the institution chrome, chosen by meaning — status colours assert state, chrome carries standing emphasis. Also spells out that an outline is not a fill, which is what this screen got wrong.
 
 ## Not delivered
 
